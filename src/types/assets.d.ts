@@ -1,5 +1,5 @@
 declare module "*.png" {
-  const src: string;
+  const src: number;
   export default src;
 }
 
@@ -14,7 +14,7 @@ declare module "*.jpeg" {
 }
 
 declare module "*.svg" {
-  const src: string;
+  const src: number;
   export default src;
 }
 
