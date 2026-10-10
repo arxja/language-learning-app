@@ -1,4 +1,6 @@
 allowBuilds:
   '@tailwindcss/oxide': false
+  browser-tabs-lock: false
+  core-js: false
 overrides:
   lightningcss: 1.30.1
