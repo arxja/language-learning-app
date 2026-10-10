@@ -15,7 +15,7 @@ export default function Index() {
   }
 
   if (!isSignedIn) {
-    return <Redirect href={"/onBoarding"} />;
+    return <Redirect href={"/OnBoarding"} />;
   }
 
   return (
@@ -23,7 +23,7 @@ export default function Index() {
       <View className="flex-1 justify-center items-center gap-4">
         <Text className="h2 text-center text-lingua-purple">Lingua</Text>
         <Link
-          href={"/onBoarding"}
+          href={"/OnBoarding"}
           className="body-md text-lingua-purple underline mt-4"
         >
           Open onBoarding
