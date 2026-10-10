@@ -1,5 +1,5 @@
 import { useAuth, useClerk } from "@clerk/expo";
-import { Link, Redirect } from "expo-router";
+import { Redirect, router } from "expo-router";
 import { ActivityIndicator, Text, TouchableOpacity, View } from "react-native";
 
 export default function Index() {
@@ -15,29 +15,30 @@ export default function Index() {
   }
 
   if (!isSignedIn) {
-    return <Redirect href={"/OnBoarding"} />;
+    return <Redirect href="/OnBoarding" />;
   }
 
   return (
-    <View className="flex-1 justify-center items-center">
-      <View className="flex-1 justify-center items-center gap-4">
-        <Text className="h2 text-center text-lingua-purple">Lingua</Text>
-        <Link
-          href={"/OnBoarding"}
-          className="body-md text-lingua-purple underline mt-4"
-        >
-          Open onBoarding
-        </Link>
-        <TouchableOpacity
-          className="bg-lingua-purple rounded-2xl px-6 py-3"
-          activeOpacity={0.85}
-          onPress={() => signOut()}
-        >
-          <Text className="font-poppins-semibold text-base text-white">
-            Sign Out
-          </Text>
-        </TouchableOpacity>
-      </View>
+    <View className="flex-1 justify-center items-center gap-4">
+      <Text className="h2 text-center text-lingua-purple">Lingua</Text>
+      <TouchableOpacity
+        className="bg-lingua-purple rounded-2xl px-6 py-3"
+        activeOpacity={0.85}
+        onPress={() => router.push("/language-select")}
+      >
+        <Text className="font-poppins-semibold text-base text-white">
+          Choose a Language
+        </Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        className="px-6 py-3"
+        activeOpacity={0.7}
+        onPress={() => signOut()}
+      >
+        <Text className="font-poppins-medium text-sm text-text-secondary">
+          Sign Out
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 }
