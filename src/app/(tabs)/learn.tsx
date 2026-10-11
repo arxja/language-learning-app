@@ -2,7 +2,6 @@ import { Ionicons } from "@expo/vector-icons";
 import { Image } from "expo-image";
 import { useRouter } from "expo-router";
 import {
-  Alert,
   Image as RNImage,
   ScrollView,
   StyleSheet,
@@ -12,7 +11,7 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import { LessonCard } from "@/components/LessonCard";
+import LessonCard from "@/components/LessonCard";
 import { images } from "@/constants/images";
 import { colors } from "@/constants/theme";
 import { LESSONS } from "@/data/lessons";
@@ -139,8 +138,7 @@ export default function LearnScreen() {
                 !completedLessonIds.includes(lesson.id) &&
                 index === inProgressIndex
               }
-              // onPress={() => router.push(`/lesson/${lesson.id}`)} => Just to prevent navigation and type error
-              onPress={() => Alert.alert("Lesson Pressed", `You pressed ${lesson.title}`)}
+              onPress={() => router.push(`/lesson/${lesson.id}`)}
             />
           ))}
         </View>
