@@ -31,6 +31,15 @@ export default function Index() {
         </Text>
       </TouchableOpacity>
       <TouchableOpacity
+        className="bg-lingua-purple rounded-2xl px-6 py-3"
+        activeOpacity={0.85}
+        onPress={() => router.push("/(tabs)")}
+      >
+        <Text className="font-poppins-semibold text-base text-white">
+          Go to App
+        </Text>
+      </TouchableOpacity>
+      <TouchableOpacity
         className="px-6 py-3"
         activeOpacity={0.7}
         onPress={() => signOut()}
