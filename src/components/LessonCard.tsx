@@ -16,7 +16,7 @@ function getLessonThumbnail(lessonId: string): string {
   return `https://picsum.photos/seed/${lessonId}/160/100`;
 }
 
-export function LessonCard({
+export default function LessonCard({
   lesson,
   index,
   isCompleted,
