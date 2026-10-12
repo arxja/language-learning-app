@@ -1,56 +1,111 @@
-# Welcome to your Expo app 👋
+# Language Learning App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A Duolingo-inspired language learning mobile app built with Expo, React Native, TypeScript, and Expo Router.
 
-## Get started
+This project is designed as a practical learning app for building a modern AI-powered language experience with onboarding, lesson flows, progress tracking, and AI teacher features.
+
+## Features
+
+- Onboarding and language selection
+- Learning dashboard and lesson cards
+- Lesson detail and progress flow
+- AI teacher / tutor experience
+- Chat and video-oriented learning concepts
+- Zustand-powered local app state
+- NativeWind styling for a polished mobile UI
+
+## Tech Stack
+
+- Expo + React Native
+- TypeScript
+- Expo Router
+- NativeWind
+- Zustand
+- AsyncStorage
+- Clerk
+- Stream / video integration
+- Vision agent support for AI learning experiences
+
+## Project Structure
+
+```txt
+.
+├── app/
+│   ├── (auth)/
+│   ├── (tabs)/
+│   ├── lesson/
+│   ├── _layout.tsx
+│   ├── index.tsx
+│   ├── language-select.tsx
+│   └── OnBoarding.tsx
+├── src/
+│   ├── api/
+│   ├── app/
+│   ├── components/
+│   ├── constants/
+│   ├── data/
+│   ├── store/
+│   ├── types/
+│   └── global.css
+├── vision-agent/
+├── assets/
+├── app.json
+├── package.json
+├── tsconfig.json
+├── README.md
+└── ...
+```
+
+## Getting Started
 
 1. Install dependencies
 
-   ```bash
-   npm install
-   ```
+```bash
+pnpm install
+```
 
 2. Start the app
 
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
 ```bash
-npm run reset-project
+pnpm start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+3. Run on a simulator or device
 
-### Other setup steps
+```bash
+pnpm run android
+pnpm run ios
+pnpm run web
+```
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+## Useful Scripts
 
-## Learn more
+```bash
+pnpm run start
+pnpm run android
+pnpm run ios
+pnpm run web
+pnpm run lint
+pnpm run typecheck
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+## Notes
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- The app uses file-based routing through Expo Router.
+- The content and lesson data are kept in the data folder to make the project easy to extend and teach.
+- Backend and secure services such as Clerk/Stream token generation should stay server-side and never expose secrets in the mobile app.
 
-## Join the community
+## Credits & Attribution
 
-Join our community of developers creating universal apps.
+This project incorporates concepts and code originally developed by **JavaScript Mastery** as part of their React Native tutorial series. Their work is used here with attribution, in accordance with open-source best practices.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- Original repository: [adrianhajdin/](https://github.com/adrianhajdin/react-native-lingua)
+- Author: [@adrianhajdin](https://github.com/adrianhajdin)
+
+Any modifications, optimizations, or additional features are my own and do not reflect on the original author.
+
+---
+
+## License
+
+MIT
