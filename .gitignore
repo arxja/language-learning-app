@@ -43,3 +43,8 @@ example
 /android
 
 .env
+
+.venv/
+__pycache__/
+*.pyc
+uv.lock
